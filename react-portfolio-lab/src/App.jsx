@@ -1,33 +1,41 @@
 
 import './App.css';
 
+  // must import css file to show stylization in browser
+
+
+
 const App = () => {
-  const skill = { name: 'lesson', comfort: 8, frontEnd: true, backend: true };
+  
+  // creates an umbrella component for easy exportation later
+
 
   const mySkills = [
   {
     name:'HTML',
-    comfort: 9,
+    ability: 9,
     frontEnd: true,
     backend: false
   },
   {
     name:'CSS',
-    comfort: 7,
+    ability: 7,
     frontEnd: true,
     backend: false
   },
   {
     name:'JavaScript',
-    comfort: 5,
+    ability: 5,
     frontEnd: true,
     backend: true
   },
 ]
 
-  const skillsList = mySkills.map((skill, index) =>
-    <li lessons={index}>{skill.name}</li>
-  );
+  // ^ the array of objects analyzed below when determining which info to display in browser
+  // name and ability properties are directly read
+  // frontEnd & backEnd are booleans evaluated below in ternary operators
+
+
 
   return (
     <>
@@ -39,7 +47,7 @@ const App = () => {
       <ul>
         {mySkills.map((skill, index) =>
           <li key={index}>
-            <strong>{skill.name}</strong> - Ability: {skill.comfort}
+            <strong>{skill.name}</strong> - Ability: {skill.ability}
             {skill.frontEnd ? '/10 - Front-End' : ''}
             {skill.backend ? ' & Back-End' : ''}
           </li>
@@ -50,8 +58,15 @@ const App = () => {
   );
 };
 
+  // looping and conditional rendering; very similar to HTML format
+  // loops through each object, gathering properties to display
+  // ternary operators used in place of if-statements
+  // return must be immediately succeeded by ()
+
+
 export default App;
 
+  // allows other files to use this component
 
 
 
