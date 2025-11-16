@@ -1,0 +1,27 @@
+body {
+  color: grey;
+  display: flex;
+  justify-content: center;
+ 
+}
+
+h1 {
+  color: gold;
+  display: flex;
+  justify-content: center;
+  font-size: 100px;
+}
+
+h2 {
+  color: lightskyblue;
+  display: flex;
+  justify-content: center;
+  font-size: 60px;
+}
+
+li {
+  color: goldenrod;
+  display: flex;
+  justify-content: center;
+  font-size: 45px;
+}

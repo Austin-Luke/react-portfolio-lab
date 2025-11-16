@@ -1,5 +1,56 @@
 
+import './App.css';
 
+const App = () => {
+  const skill = { name: 'lesson', comfort: 8, frontEnd: true, backend: true };
+
+  const mySkills = [
+  {
+    name:'HTML',
+    comfort: 9,
+    frontEnd: true,
+    backend: false
+  },
+  {
+    name:'CSS',
+    comfort: 7,
+    frontEnd: true,
+    backend: false
+  },
+  {
+    name:'JavaScript',
+    comfort: 5,
+    frontEnd: true,
+    backend: true
+  },
+]
+
+  const skillsList = mySkills.map((skill, index) =>
+    <li lessons={index}>{skill.name}</li>
+  );
+
+  return (
+    <>
+    <nav>
+      <h1>Austin Berndlmaier</h1>
+    </nav>
+    <body>
+      <h2>Coding Skills Self-Assessment</h2>
+      <ul>
+        {mySkills.map((skill, index) =>
+          <li key={index}>
+            <strong>{skill.name}</strong> - Ability: {skill.comfort}
+            {skill.frontEnd ? '/10 - Front-End' : ''}
+            {skill.backend ? ' & Back-End' : ''}
+          </li>
+        )}
+      </ul>
+      </body>
+    </>
+  );
+};
+
+export default App;
 
 
 
